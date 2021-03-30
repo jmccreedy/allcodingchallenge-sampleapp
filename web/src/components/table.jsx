@@ -34,7 +34,7 @@ export function BasicTable(props) {
           <TableCell align="right">{row.social_interaction_time}</TableCell>
           <TableCell align="right">{row.work_time}</TableCell>
           <TableCell align="right">{row.occupation}</TableCell>
-          <TableCell align="right">{row.work_time}</TableCell>
+          <TableCell align="right">{row.workavg}</TableCell>
         </TableRow>)))
   }
 
@@ -64,6 +64,7 @@ export function BasicTable(props) {
           <TableCell align="right">Social</TableCell>
           <TableCell align="right">work_time</TableCell>
           <TableCell align="right">Occupation</TableCell>
+          <TableCell align="right">Average working time</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>

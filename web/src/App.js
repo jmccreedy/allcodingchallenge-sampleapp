@@ -27,7 +27,7 @@ function App() {
   
   const [data, setData] = useState([])
   const [dataLoad, setDataLoad] = useState(false)
-    const url = 'http://localhost:5000/alldata'
+    const url = 'http://localhost:5000/avgwork'
     useEffect(async () => {
       const result =  await axios({
         url: url,

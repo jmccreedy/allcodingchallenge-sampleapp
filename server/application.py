@@ -23,9 +23,15 @@ def employee():
 def alldata():
     return json.dumps(stats_helper.join_all())
 
+def convert_float(dictionary):
+    dictionary['workavg'] = float(dictionary['workavg'])
+    return dictionary
+
 @app.route('/avgwork')
 def avgwork():
-    return json.dumps(float(stats_helper.calculate_work_avg()[0]["workavg"]))
+    avg_work = stats_helper.calculate_work_avg()
+    averages = list(map(convert_float, avg_work))
+    return json.dumps(averages)
 
 
 print("### Application started...")
