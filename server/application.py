@@ -24,8 +24,8 @@ def alldata():
     return json.dumps(stats_helper.join_all())
 
 @app.route('/avgwork')
-def alldata():
-    return json.dumps(stats_helper.calculate_work_avg())
+def avgwork():
+    return json.dumps(float(stats_helper.calculate_work_avg()[0]["workavg"]))
 
 
 print("### Application started...")

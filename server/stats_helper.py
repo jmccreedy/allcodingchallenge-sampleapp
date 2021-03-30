@@ -22,5 +22,5 @@ class StatsHelper():
 
     # HINT: You can define more queries here, along with some python logic to calculate!
     def calculate_work_avg(self):
-       result = self.database.fetch_all("SELECT AVG(work_time) FROM dayroutine")
-      return result
+        result = self.database.fetch_all("SELECT AVG(work_time) AS workavg FROM dayroutine")
+        return result

@@ -64,7 +64,6 @@ export function BasicTable(props) {
           <TableCell align="right">Social</TableCell>
           <TableCell align="right">work_time</TableCell>
           <TableCell align="right">Occupation</TableCell>
-          <TableCell align="right">avg_work_time</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
