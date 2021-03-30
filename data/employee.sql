@@ -65,3 +65,4 @@ INSERT INTO `employeedata` (`id`, `employee_id`, `employee_name`, `age`, `gender
 -- /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 -- /*!test */;
+-- /*!test 2*/;
