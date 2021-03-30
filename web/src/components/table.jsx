@@ -21,15 +21,19 @@ export function BasicTable(props) {
 
   const columns = (props) => {
     const data = props.data
+    console.log(data)
     return (
       data.map((row) => (
         <TableRow key={row.employee_id}>
           <TableCell component="th" scope="row">
             {row.employee_id}
           </TableCell>
+          <TableCell align="right">{row.employee_name}</TableCell>
           <TableCell align="right">{row.exercise_time}</TableCell>
           <TableCell align="right">{row.sleep_time}</TableCell>
           <TableCell align="right">{row.social_interaction_time}</TableCell>
+          <TableCell align="right">{row.work_time}</TableCell>
+          <TableCell align="right">{row.occupation}</TableCell>
           <TableCell align="right">{row.work_time}</TableCell>
         </TableRow>)))
   }
@@ -54,10 +58,13 @@ export function BasicTable(props) {
       <TableHead>
         <TableRow>
           <TableCell>Employee ID</TableCell>
+          <TableCell align="right">Employee Name</TableCell>
           <TableCell align="right">Exercise time</TableCell>
           <TableCell align="right">Sleep</TableCell>
           <TableCell align="right">Social</TableCell>
           <TableCell align="right">work_time</TableCell>
+          <TableCell align="right">Occupation</TableCell>
+          <TableCell align="right">avg_work_time</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>

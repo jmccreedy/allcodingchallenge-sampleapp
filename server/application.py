@@ -23,6 +23,10 @@ def employee():
 def alldata():
     return json.dumps(stats_helper.join_all())
 
+@app.route('/avgwork')
+def alldata():
+    return json.dumps(stats_helper.calculate_work_avg())
+
 
 print("### Application started...")
 

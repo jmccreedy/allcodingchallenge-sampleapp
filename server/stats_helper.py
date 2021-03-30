@@ -12,7 +12,7 @@ class StatsHelper():
         return result
 
     def select_all(self):
-        result = self.database.fetch_all("SELECT * FROM dayroutine limit 0,7")
+        result = self.database.fetch_all("SELECT * FROM dayroutine")
         return result
 
 
@@ -21,6 +21,6 @@ class StatsHelper():
         return result
 
     # HINT: You can define more queries here, along with some python logic to calculate!
-    def calculate_another_stat(self):
-      # all_rows = self.database.fetch_all("")
-      return None
+    def calculate_work_avg(self):
+       result = self.database.fetch_all("SELECT AVG(work_time) FROM dayroutine")
+      return result

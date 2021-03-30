@@ -17,7 +17,7 @@ function App() {
     table: {
       minWidth: 650,
       height: '500px',
-      overflowY: "hidden",
+      overflowY: "scroll",
       top: "100px"
     },
   });
@@ -27,7 +27,7 @@ function App() {
   
   const [data, setData] = useState([])
   const [dataLoad, setDataLoad] = useState(false)
-    const url = 'http://localhost:5000/'
+    const url = 'http://localhost:5000/avgwork'
     useEffect(async () => {
       const result =  await axios({
         url: url,
