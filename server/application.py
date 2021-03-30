@@ -25,12 +25,16 @@ def alldata():
 
 def convert_float(dictionary):
     dictionary['workavg'] = float(dictionary['workavg'])
+    dictionary['sleepavg'] = float(dictionary['sleepavg'])
+    dictionary['exerciseavg'] = float(dictionary['exerciseavg'])
+    dictionary['socialavg'] = float(dictionary['socialavg'])
+    dictionary['employeeid'] = float(dictionary['employeeid'])
     return dictionary
 
 @app.route('/avgwork')
-def avgwork():
-    avg_work = stats_helper.calculate_work_avg()
-    averages = list(map(convert_float, avg_work))
+def avg():
+    averages = stats_helper.calculate_avg()
+    averages = list(map(convert_float, averages))
     return json.dumps(averages)
 
 

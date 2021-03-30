@@ -25,15 +25,10 @@ export function BasicTable(props) {
     return (
       data.map((row) => (
         <TableRow key={row.employee_id}>
-          <TableCell component="th" scope="row">
-            {row.employee_id}
-          </TableCell>
-          <TableCell align="right">{row.employee_name}</TableCell>
-          <TableCell align="right">{row.exercise_time}</TableCell>
-          <TableCell align="right">{row.sleep_time}</TableCell>
-          <TableCell align="right">{row.social_interaction_time}</TableCell>
-          <TableCell align="right">{row.work_time}</TableCell>
-          <TableCell align="right">{row.occupation}</TableCell>
+          <TableCell align="right">{row.employeeid}</TableCell>
+          <TableCell align="right">{row.sleepavg}</TableCell>
+          <TableCell align="right">{row.exerciseavg}</TableCell>
+          <TableCell align="right">{row.socialavg}</TableCell>
           <TableCell align="right">{row.workavg}</TableCell>
         </TableRow>)))
   }
@@ -58,12 +53,9 @@ export function BasicTable(props) {
       <TableHead>
         <TableRow>
           <TableCell>Employee ID</TableCell>
-          <TableCell align="right">Employee Name</TableCell>
-          <TableCell align="right">Exercise time</TableCell>
-          <TableCell align="right">Sleep</TableCell>
-          <TableCell align="right">Social</TableCell>
-          <TableCell align="right">work_time</TableCell>
-          <TableCell align="right">Occupation</TableCell>
+          <TableCell align="right">Average Sleeping time</TableCell>
+          <TableCell align="right">Average time exercising</TableCell>
+          <TableCell align="right">Average social time</TableCell>
           <TableCell align="right">Average working time</TableCell>
         </TableRow>
       </TableHead>
